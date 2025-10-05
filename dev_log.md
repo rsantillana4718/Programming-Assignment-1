@@ -1,8 +1,6 @@
 Developer Log
 Each entry includes: what I tried, what broke, why, how I fixed it, and a short proof.
 
----
-
 ## Entry 1 — `display()` loop never returned
 
 **What I tried**
