@@ -1,7 +1,7 @@
 Developer Log
 Each entry includes: what I tried, what broke, why, how I fixed it, and a short proof.
 
-## Entry 1 — `display()` loop never returned
+## 1) `display()` loop never returned
 
 **What I tried**
 First pass of `LinkedList<T>::display()`:
@@ -58,7 +58,7 @@ Choose: 5
 
 ---
 
-## Entry 2 — Removing head corrupted the ring
+## 2) Removing head corrupted the ring
 
 **What I tried**
 `pop_front()` advanced `head_` and deleted the old node, but I forgot to repair the circle.
@@ -100,7 +100,7 @@ Choose: 5
 [Robot(B, Battery=2)] (circular)
 ```
 
-## Entry 3 — Rotate advanced head but not tail
+## 3) Rotate advanced head but not tail
 
 **What I tried**
 
@@ -138,7 +138,7 @@ Choose: 5
 
 ---
 
-## Entry 4 — Skipping a robot after removal in the turn loop
+## 4) Skipping a robot after removal in the turn loop
 
 **What I tried (main.cpp)**
 In `runOneTurn`, after a robot hit 0, I removed it **and then rotated**.
@@ -179,7 +179,7 @@ Choose: 5
 [Robot(B, Battery=2)] (circular)
 ```
 
-## Entry 5 — Split halves off by one on even length
+## 5) Split halves off by one on even length
 
 **What I tried**
 I used fast/slow but didn’t advance `fast` the extra step for even sizes.
@@ -216,7 +216,7 @@ Ring B:
 [C -> D] (circular)
 ```
 
-## Entry 6 — Stats changed the ring order
+## 6) Stats changed the ring order
 
 **What I tried**
 To compute the average battery I rotated the ring to traverse it.
@@ -268,7 +268,7 @@ Choose: 5
 [head remains the same as before the stats call]
 ```
 
-## Entry 7 — Single-node edge cases
+## 7) Single-node edge cases
 
 **What I tried**
 I didn’t handle the single-node branch in `pop_front()` and `rotate()`.
