@@ -1,6 +1,3 @@
-# Developer Log
-Each entry includes: what I tried, what broke, why it happened, how I fixed it, and proof that it works.
-
 ## 1) `display()` didn’t show nodes (sometimes hung)
 
 **What I tried**
