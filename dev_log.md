@@ -100,8 +100,6 @@ Choose: 5
 [Robot(B, Battery=2)] (circular)
 ```
 
----
-
 ## Entry 3 — Rotate advanced head but not tail
 
 **What I tried**
@@ -181,8 +179,6 @@ Choose: 5
 [Robot(B, Battery=2)] (circular)
 ```
 
----
-
 ## Entry 5 — Split halves off by one on even length
 
 **What I tried**
@@ -219,8 +215,6 @@ Ring A:
 Ring B:
 [C -> D] (circular)
 ```
-
----
 
 ## Entry 6 — Stats changed the ring order
 
@@ -274,8 +268,6 @@ Choose: 5
 [head remains the same as before the stats call]
 ```
 
----
-
 ## Entry 7 — Single-node edge cases
 
 **What I tried**
@@ -322,7 +314,5 @@ Choose: 2   (drain to 0 path) or call pop_front() via menu logic
 Choose: 5
 [] (empty)
 ```
-
----
 
 These fixes, along with the invariant checks I kept under `#ifndef NDEBUG`, stabilized the list and made the game loop behave as expected.
