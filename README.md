@@ -4,14 +4,6 @@ In my list I keep both `head_` and `tail_` and maintain the invariant:
 
 if (!empty)  tail_->next == head_
 
-This lets me do the important operations in constant time:
-
-| Operation     | What I do (from `LinkedList.h`)                          | Cost |
-| ------------- | -------------------------------------------------------- | ---- |
-| `append(x)`   | link `tail_->next = new`, `new->next = head_`, move tail | O(1) |
-| `rotate()`    | `head_ = head_->next; tail_ = tail_->next;`              | O(1) |
-| `pop_front()` | move `head_` forward and repair `tail_->next = head_`    | O(1) |
-
 I considered `std::vector` and a non-circular singly list. `vector` would require shifting to pop the front (O(n)), and a non-circular list needs extra checks to jump from last back to first. The circular structure matched the game’s “pass the baton” idea with the simplest code paths.
 
 2) How the split works
